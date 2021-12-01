@@ -39,7 +39,7 @@ public class DefaultAnimation {
     public void animate(double duration, double valueTo) {
         double path = (double) (System.currentTimeMillis() - animationStart) / (animationEnd - animationStart);
         animationStart = System.currentTimeMillis();
-        animationEnd = (long) (System.currentTimeMillis() + duration * 1000);
+        animationEnd = (long) (System.currentTimeMillis() + duration);
         if(!(path >= 1)) {
             animationFromValue = (animationToValue - animationFromValue) * path + animationFromValue;
         } else {
