@@ -53,7 +53,7 @@ public class Animation {
             value = this.animationToValue;
         }
         this.lastValue = value;
-        return alive;
+        return isAlive();
     }
 
     public boolean isDone() {
