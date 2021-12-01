@@ -14,7 +14,7 @@ package anims;
 
 */
 
-public class DefaultAnimation {
+public class DAnimation {
 
     private long animationStart;
     private long animationEnd;
