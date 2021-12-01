@@ -32,7 +32,7 @@ You can use some default animations which contains util, like:
 
 ## How to use it?
 To start using you need import this repo as library or just download it and move to your src folder.
-### Gradle Import
+### Gradle Import (Probably now doesn't works)
 ```gradle
 repositories {
   maven { url 'https://jitpack.io' }
@@ -43,7 +43,7 @@ dependencies {
 }
 ```
 
-### Maven Import
+### Maven Import (Probably now doesn't works)
 ```xml
 <repository>    
   <id>jitpack.io</id>    
