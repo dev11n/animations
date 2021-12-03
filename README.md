@@ -7,8 +7,6 @@
 
 <h4 align="center">This animation methods aren't mine, but i rewrited some things. I made this repo for helping people easily making animations.</h4>
 <h4 align="center">But i'll always update this repo. (Probably xdf)</h4>
-<h4 align="center">The main thing it's a credits to:</h6>
-<h4 align="center">~ DelfikPro</h6>
 <h1></h1>
 
 ## What is this?
