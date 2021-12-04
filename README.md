@@ -3,12 +3,6 @@
 <h1 align="center">Java Animations</h1>
 <h3></h3>
 
-## Warning
-
-<h4 align="center">This animation methods aren't mine, but i rewrited some things. I made this repo for helping people easily making animations.</h4>
-<h4 align="center">But i'll always update this repo. (Probably xdf)</h4>
-<h1></h1>
-
 ## What is this?
 Animations is java util which can you help animate with some animation types.
 <h1></h1>
