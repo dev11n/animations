@@ -5,11 +5,6 @@ package anims;
                (CRINGE)
           Writed in 01.12.21.
 
-      I can say big thanks for:
-             ~ DelfikPro
-
-    It's basically rewrited by me.
-
     Basically i did it for me, but yeee!
 
 */
