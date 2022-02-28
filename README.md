@@ -5,7 +5,6 @@
 
 ## What is this?
 Animations is java util which can you help animate with some animation types.
-<h1></h1>
 
 ## What i can do with it?
 You can use some default animations which contains util, like:
@@ -72,5 +71,4 @@ yourAnimation.isAlive() // Checks if animation is alive
 
 ### I'm think this animations will help you. There about 30 animation types (Include Linear).
 
-<h1></h1>
 <h1 align="center">Thanks for reading.</h1>
