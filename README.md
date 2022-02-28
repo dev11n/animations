@@ -25,29 +25,10 @@ You can use some default animations which contains util, like:
 ## How to use it?
 To start using you need import this repo as library or just download it and move to your src folder.
 ### Gradle Import (Probably now doesn't works)
-```gradle
-repositories {
-  maven { url 'https://jitpack.io' }
-}
-
-dependencies {
-    implementation 'com.github.xHogoshi:Animations:SNAPSHOT'
-}
-```
+## sry im too lazy, just download it :\
 
 ### Maven Import (Probably now doesn't works)
-```xml
-<repository>    
-  <id>jitpack.io</id>    
-  <url>https://jitpack.io</url>
-</repository>
-
-<dependency>
-  <groupId>com.github.xHogoshi</groupId>
-  <artifactId>Animations</artifactId>
-  <version>SNAPSHOT</version>
-</dependency>
-```
+## sry im too lazy, just download it :\
 
 ### Next you need initialize animation as variable.
 Example:
