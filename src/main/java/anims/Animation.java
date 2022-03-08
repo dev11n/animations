@@ -59,6 +59,10 @@ public class Animation {
         return animationToValue;
     }
 
+    public double getTarget() {
+        return getAnimationToValue();
+    }
+
     public double getDuration() {
         return duration;
     }
