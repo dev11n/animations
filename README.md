@@ -76,6 +76,10 @@ yourAnimation.setValue(value);
 yourAnimation.isDone() // Проверяет если завершена
 yourAnimation.isAlive() // Проверяет если живая
 ```
+#### Как я могу получить значение, к которому анимашка стремится?
+```java
+yourAnimation.getTarget()
+```
 
 <h1></h1>
 
