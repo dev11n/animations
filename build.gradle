@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+group 'anims'
+version '2.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
