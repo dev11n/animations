@@ -1,14 +1,16 @@
 
 <h1></h1>
-<h1 align="center">Java Animations</h1>
+<h1 align="center">Анимашки на джаве (RUS)</h1>
 <h3></h3>
+## 80% кода взято отсюда: https://github.com/delfikpro/cristalix-client-sdk/blob/stable/ui-engine/src/main/kotlin/ru/cristalix/uiengine/eventloop/Animation.kt (Говорю про основной класс - Animation.class)
+## Я лишь переписал это на жаве, убрал зависимость анимашки от позиции элемента и немношко улучшил. к сожалению, далеко не каждый человек может найти это, да и вцелом анимашки, поэтому я решил создать репо по этому поводу.
 
-## What is this?
-Animations is java util which can you help animate with some animation types.
+## Что это?
+Это - помощник для ваших анимашек, ваша мечта. На данный момент я не особо на них зациклен, поэтому делайте выводы сами, и тут могут быть проблемы.
 
-## What i can do with it?
-You can use some default animations which contains util, like:
-#### • NONE (Linear Animation);
+## Что же я смогу сделать с этим?
+Вы сможете использовать стандартные анимашки которые предоставляет сам ютил:
+#### • NONE (Линейная);
 #### • Quad In, Quad Out, Quad InOut (Both);
 #### • Elastic In, Elastic Out, Elastic InOut (Both);
 #### • Expo In, Expo Out, Expo InOut (Both);
@@ -19,56 +21,68 @@ You can use some default animations which contains util, like:
 #### • Quint In, Quint Out, Quint InOut (Both);
 #### • Cubic In, Cubic Out, Cubic InOut (Both);
 #### • Sine In, Sine Out, Sine InOut (Both);
-## Also you can add your animation types with math, but mainly it have all animations from https://easings.net/
+## Вы так-же можете добавить ваши анимашки, уникальные или улучшить что-то, но мне хватало всегда этих. Что бы понять как каждая из вышеперечисленных выглядит, я закреплю этот сайтик тут https://easings.net/
 
-## How to use it?
-To start using you need import this repo as library or just download it and move to your src folder.
-### Gradle Import (Probably now doesn't works)
-## sry im too lazy, just download it :\
+## Как-же все таки это использовать?
+Для начала, вам нужно собстенно закинуть в ваш проект этот весь ютил, используя грабли, мавен, ну или просто скачайте и закиньте :)
+### Импорт для граблей
+## Скоро будет!
 
-### Maven Import (Probably now doesn't works)
-## sry im too lazy, just download it :\
+### Импорт для мавена
+## Скоро будет!
 
-### Next you need initialize animation as variable.
-Example:
+### После того, как вы закинули анимашки в свой проект вам нужно создать поле с самой анимацией. Их несколько:
+#### • Анимация цвета (ColorAnimation.class) - С ней вы очень легко можете анимировать цвет. (Изинги не поддерживаются в связи тем, что если ваше значение больше 255 в java.awt.Color'e вы словите краш.
+#### • Анимация позиции (V2Animation.class) - С этой анимашкой вы сможете анимировать 2 оси - x и y.
+#### • Анимация квадрата (QuadAnimation.class) - С этой анимашкой вы сможете использовать 2 анимации позиции - pos1 и pos2. Что бы не создавать по 20 полей с V2 анимацией я решил сделать это.
+#### • Обычная анимация (Animation.class) - Э ну просто анимация.
+И так, вернемся. Вам нужно создать поле: (Если вы используете другие анимашки, просто смените поле на анимашку вашей задачи, к примеру Animation меняете на ColorAnimation)
 ```java
 Animation yourAnimation = new Animation();
 ```
 
-### After that you need update animation in your render method. ( If you can't or don't need easings, just instead Animation use DAnimation and you don't need any update methods )
-Example:
+### После, вам нужно апдейтить эту анимацию. В связи с тем, что данные анимации используют изинги, вам прийдется вместе с рендером вашего элемента апдейтить анимашку, ну ничего страшного :>
+Пример:
 ```java
 yourAnimation.update();
 ```
 
-### Next you need animate this animation with duration in millis. ( This method only gives animation target, not updating it!! )
-Example:
+### Далее, когда вы убедились, что вы апдейтите анимашку, вам нужно ее анимировать (разумеется, за этим вы сюда и пришли)
+### Примечание: аргумент safe отвечает за то, что ваша анимашка не будет лагать если вы будете вызывать animate без каких-либо проверок типа if(animation.isDone()), тоесть если анимашка завершилась.
+### Ещё одно примечание: duration измеряется в секундах, да, раньше в милисекундах, но я так подумал, что вам мешает юзать к примеру вместо 500 (в милисекундах) 0.5? кароче так проще...
+Пример:
 ```java
-yourAnimation.animate(value, duration, easing);
-
-// For Example real use
-yourAnimation.animate(100, 1500, Easing.BACK_BOTH); // It will animate animation to 100 value and animating 1500 millis or 1,5 second with Back Both easing. All easings: https://easings.net/
+// Если ваша анимация - обычная
+yourAnimation.animate(value, duration, easing, safe);
+// Если ваша анимация - цвет
+yourAnimation.animate(new Color(red, green, blue, alpha), duration, safe);
+// Если ваша анимация - позиция
+yourAnimation.animate(new V2(x, y), duration, easing, safe);
+// Если ваша анимация - квад / quadAnimation
+yourAnimation.animate(new V2(x1, y1), new V2(x2, y2), duration, easing, safe);
 ```
 
-### All ready!!! Now only little things.
-#### How to get value from animation?
+### Всё готово! Но, надо же как то получать какую-то информацию из анимации? Как же?
+#### Получение значения анимации:
 ```java
 yourAnimation.getValue()
 ```
-#### How to set Value without animation?
+#### Как установить значение анимашке без анимации (я гений да)?
 ```java
 yourAnimation.setValue(value);
 ```
-#### How to check if animation is animating or done?
+#### Как я могу проверить, завершилась или анимируется анимашка?
 ```java
-yourAnimation.isDone() // Checks if animation is done
-yourAnimation.isAlive() // Checks if animation is alive
+yourAnimation.isDone() // Проверяет если завершена
+yourAnimation.isAlive() // Проверяет если живая
 ```
 
 <h1></h1>
 
-### For now it haven't any beazier algorithm for custom animations. It's only Math.
+### На данный момент тут нету каких-либо алгоритмов безье, но если вы 8y.o. talent то закиньте мне в дс реализацию(мнелень), могу запушить. (Hogoshi#1706)
 
-### I'm think this animations will help you. There about 30 animation types (Include Linear).
+### Я считаю, что эти анимашки - самые лучшие в своем роде. С ними очень легко работать, а сделать новую анимашку - делать нечего.
+### Примечание: На данный момент я не проверял все ли до единой проверочки работает, я боюсь, что я где-то поднасрал, и если так есть - Hogoshi#1706
 
-<h1 align="center">Thanks for reading.</h1>
+<h1 align="center">Спасибо за прочтение.</h1>
+<h1 align="center">If u not from ru, use translator, sry, im too lazy to translate this.</h1>
