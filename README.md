@@ -27,32 +27,31 @@
 Для начала, вам нужно собстенно закинуть в ваш проект этот весь ютил, используя грабли, мавен, ну или просто скачайте и закиньте :)
 ### Импорт для граблей
 ```gradle
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		maven { url 'https://jitpack.io' }
 	}
+}
 
-	dependencies {
-	        implementation 'com.github.xHogoshi:Animations:2.0'
-	}
+dependencies {
+	implementation 'com.github.xHogoshi:Animations:2.0'
+}
 ```
 
 ### Импорт для мавена
 ```maven
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+<repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+</repositories>
 
-	<dependency>
-	    <groupId>com.github.xHogoshi</groupId>
-	    <artifactId>Animations</artifactId>
-	    <version>2.0</version>
-	</dependency>
+<dependency>
+    <groupId>com.github.xHogoshi</groupId>
+    <artifactId>Animations</artifactId>
+    <version>2.0</version>
+</dependency>
 ```
 
 ### После того, как вы закинули анимашки в свой проект вам нужно создать поле с самой анимацией. Их несколько:
