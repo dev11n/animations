@@ -1,43 +1,34 @@
 package anims;
 
-import org.lwjgl.Sys;
-
-/*
-
-               (CRINGE)
-          Writed in 01.12.21.
-
-    Basically i did it for me, but yeee!
-
-*/
-
 public class Animation {
 
     private long animationStart;
     private double duration;
     private double animationFromValue;
     private double animationToValue;
-    private Easing easing = Easings.NONE;
     private double lastValue;
 
-    public double getValue() {
-        return this.lastValue;
-    }
+    private Easing easing = Easings.NONE;
 
-    public void setValue(double value) {
-        this.animationFromValue = value;
-        this.animationToValue = value;
+    public void animate(double value, double duration, boolean safe) {
+        animate(value, duration, Easings.NONE, safe);
     }
 
     public void animate(double value, double duration, Easing easing) {
-        this.animationFromValue = this.lastValue;
-        this.animationToValue = value;
-        this.animationStart = System.currentTimeMillis();
-        this.duration = duration;
-        this.easing = easing;
+        animate(value, duration, easing, false);
     }
 
-    public boolean updateAnimation() {
+    public void animate(double value, double duration, Easing easing, boolean safe) {
+        if(safe && isAlive()) return;
+
+        setValue(getValue());
+        setAnimationToValue(value);
+        setAnimationStart(System.currentTimeMillis());
+        setDuration(duration * 1000);
+        setEasing(easing);
+    }
+
+    public boolean update() {
         double part = (double) (System.currentTimeMillis() - animationStart) / duration;
         double value;
         if(isAlive()) {
@@ -52,8 +43,7 @@ public class Animation {
     }
 
     public boolean isDone() {
-        double part = (double) (System.currentTimeMillis() - animationStart) / duration;
-        return part >= 1.0;
+        return !isAlive();
     }
 
     public boolean isAlive() {
@@ -61,4 +51,52 @@ public class Animation {
         return part < 1.0;
     }
 
+    public double getAnimationFromValue() {
+        return animationFromValue;
+    }
+
+    public double getAnimationToValue() {
+        return animationToValue;
+    }
+
+    public double getDuration() {
+        return duration;
+    }
+
+    public Easing getEasing() {
+        return easing;
+    }
+
+    public long getAnimationStart() {
+        return animationStart;
+    }
+
+    public double getValue() {
+        return this.lastValue;
+    }
+
+    public void setAnimationFromValue(double animationFromValue) {
+        this.animationFromValue = animationFromValue;
+    }
+
+    public void setAnimationToValue(double animationToValue) {
+        this.animationToValue = animationToValue;
+    }
+
+    public void setValue(double value) {
+        setAnimationFromValue(value);
+        setAnimationToValue(value);
+    }
+
+    public void setDuration(double duration) {
+        this.duration = duration;
+    }
+
+    public void setAnimationStart(long animationStart) {
+        this.animationStart = animationStart;
+    }
+
+    public void setEasing(Easing easing) {
+        this.easing = easing;
+    }
 }

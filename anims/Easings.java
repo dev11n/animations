@@ -2,15 +2,6 @@ package anims;
 
 import static java.lang.Math.*;
 
-/*
-
-               (CRINGE)
-          Writed in 01.12.21.
-
-    Basically i did it for me, but yeee!
-
-*/
-
 public final class Easings {
 
     public static final double c1 = 1.70158D;
