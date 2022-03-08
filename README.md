@@ -26,10 +26,34 @@
 ## Как-же все таки это использовать?
 Для начала, вам нужно собстенно закинуть в ваш проект этот весь ютил, используя грабли, мавен, ну или просто скачайте и закиньте :)
 ### Импорт для граблей
-## Скоро будет!
+```gradle
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+	dependencies {
+	        implementation 'com.github.xHogoshi:Animations:2.0'
+	}
+```
 
 ### Импорт для мавена
-## Скоро будет!
+```maven
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
+	<dependency>
+	    <groupId>com.github.xHogoshi</groupId>
+	    <artifactId>Animations</artifactId>
+	    <version>2.0</version>
+	</dependency>
+```
 
 ### После того, как вы закинули анимашки в свой проект вам нужно создать поле с самой анимацией. Их несколько:
 #### • Анимация цвета (ColorAnimation.class) - С ней вы очень легко можете анимировать цвет. (Изинги не поддерживаются в связи тем, что если ваше значение больше 255 в java.awt.Color'e вы словите краш.
