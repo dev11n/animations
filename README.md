@@ -1,4 +1,5 @@
 <h1 align="center">Java Animations</h1>
+<h3 align="center">Тута будет 2 языка - русский и английский.</h3>
 <h3 align="center">There will be 2 langs - russian and english.</h3>
 
 # RU
@@ -97,9 +98,14 @@ animation.animate(new V2(x, y), new V2(x, y), длительность, Easing, 
 ### Получение информации из анимации
 
 #### Получение текущего значения анимации
-Animation, V2Animation, QuadAnimation
+Animation, V2Animation
 ```java
 animation.getValue()
+```
+QuadAnimation
+```java
+animation.getValue1() // возращает в2 с первой позицией
+animation.getValue2() // возращает в2 с второй позоцией
 ```
 ColorAnimation
 ```java
@@ -214,9 +220,14 @@ animation.animate(/*firstPos */ new V2(x, y), /*secondPos */new V2(x, y), durati
 ### Getting info bout Animation
 
 #### Getting current value
-Animation, V2Animation, QuadAnimation
+Animation, V2Animation
 ```java
 animation.getValue()
+```
+QuadAnimation
+```java
+animation.getValue1() // Returns V2 with firstPos
+animation.getValue2() // Returns V2 with secondPos
 ```
 ColorAnimation
 ```java
