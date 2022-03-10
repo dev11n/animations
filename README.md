@@ -17,7 +17,7 @@ repositories {
 	maven { url 'https://jitpack.io' }
 }
 dependencies {
-	implementation 'com.github.xHogoshi:Animations:2.0'
+	implementation 'com.github.xHogoshi:Animations:2.0.1'
 }
 ```
 ## Maven
@@ -139,7 +139,7 @@ repositories {
 	maven { url 'https://jitpack.io' }
 }
 dependencies {
-	implementation 'com.github.xHogoshi:Animations:2.0'
+	implementation 'com.github.xHogoshi:Animations:2.0.1'
 }
 ```
 ## Maven
