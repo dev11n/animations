@@ -126,9 +126,7 @@ Let's get to the point.
 
 ### How to use that?
 For start, if u are using gradle or maven u need import this project as library, otherwise - just download it and move to your src folder.
-If you are using maven or gradle, 
-Для начала, вам нужно импортировать проекта как библиотеку, если вы используете градле или мавен, если нет - просто скачайте и закиньте в сурсы вашего проекта.
-Если же вы используете мавен или градле, then here's a small peace to use this project as library.
+If you are using maven or gradle, then, here's a small peace to use this project as library.
 ## Gradle
 ```gradle
 repositories {
