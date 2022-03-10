@@ -38,4 +38,13 @@ public class QuadAnimation {
         getPos1().update();
         getPos2().update();
     }
+    
+    public V2 getValue1() {
+        return getPos1().getValue();
+    }
+    
+    public V2 getValue2() {
+        return getPos2().getValue();
+    }
+    
 }
