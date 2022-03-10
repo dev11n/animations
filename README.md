@@ -32,7 +32,7 @@ dependencies {
 <dependency>
     <groupId>com.github.xHogoshi</groupId>
     <artifactId>Animations</artifactId>
-    <version>2.0</version>
+    <version>2.0.1</version>
 </dependency>
 ```
 
@@ -154,7 +154,7 @@ dependencies {
 <dependency>
     <groupId>com.github.xHogoshi</groupId>
     <artifactId>Animations</artifactId>
-    <version>2.0</version>
+    <version>2.0.1</version>
 </dependency>
 ```
 
