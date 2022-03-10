@@ -34,4 +34,8 @@ public class V2Animation {
     public boolean isAlive() {
         return getXPos().isAlive() && getYPos().isAlive();
     }
+    
+    public V2 getValue() {
+        return new V2(xPos.getValue(), yPos.getValue());
+    }
 }
