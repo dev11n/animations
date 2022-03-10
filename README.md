@@ -122,7 +122,7 @@ animation.setValue(значение);
 animation.getTarget()
 ```
 
-## спасибо за прочтение, надеюсь я не зря это писал, мдям.
+### спасибо за прочтение, надеюсь я не зря это писал, мдям.
 
 # EN
 So, there are quite a few "assistants" in the network for animations. Coz of that i searched for quite a long time myself, and found something. Got a little imbued with the idea of helping people and closing the issue with animations once and for all.
@@ -244,4 +244,4 @@ animation.setValue(value);
 animation.getTarget()
 ```
 
-## tysm for reading this, im literally hope that u enjoyed this and I didn't waste any time translating this into English.
+### tysm for reading this, im literally hope that u enjoyed this and I didn't waste any time translating this into English.
