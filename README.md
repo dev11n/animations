@@ -17,7 +17,7 @@ repositories {
 	maven { url 'https://jitpack.io' }
 }
 dependencies {
-	implementation 'com.github.xHogoshi:Animations:2.0.1'
+	implementation 'com.github.xHogoshi:Animations:2.1'
 }
 ```
 ## Maven
@@ -32,7 +32,7 @@ dependencies {
 <dependency>
     <groupId>com.github.xHogoshi</groupId>
     <artifactId>Animations</artifactId>
-    <version>2.0.1</version>
+    <version>2.1</version>
 </dependency>
 ```
 
@@ -80,7 +80,7 @@ animation.update();
 animation.animate(значение, длительность, Easing, safe);
 ```
 
-• V2Animation
+• PosAnimation
 ```java
 animation.animate(new V2(x, y), длительность, Easing, safe);
 ```
@@ -98,7 +98,7 @@ animation.animate(new V2(x, y), new V2(x, y), длительность, Easing, 
 ### Получение информации из анимации
 
 #### Получение текущего значения анимации
-Animation, V2Animation
+Animation, PosAnimation
 ```java
 animation.getValue()
 ```
@@ -139,7 +139,7 @@ repositories {
 	maven { url 'https://jitpack.io' }
 }
 dependencies {
-	implementation 'com.github.xHogoshi:Animations:2.0.1'
+	implementation 'com.github.xHogoshi:Animations:2.1'
 }
 ```
 ## Maven
@@ -154,7 +154,7 @@ dependencies {
 <dependency>
     <groupId>com.github.xHogoshi</groupId>
     <artifactId>Animations</artifactId>
-    <version>2.0.1</version>
+    <version>2.1</version>
 </dependency>
 ```
 
@@ -168,7 +168,7 @@ private Animation linearAnimation = new Animation();
 
 • V2Animation - Position animation. Example: V2(x, y)
 ```java
-private V2Animation V2Animation = new V2Animation();
+private PosAnimation V2Animation = new PosAnimation();
 ```
 
 • ColorAnimation - Color animation. Example: Color(red, green, blue, alpha)
@@ -202,7 +202,7 @@ All easings u can find at https://easings.net/ , just use Easings.EASING. For ex
 animation.animate(value, duration, Easing, safe);
 ```
 
-• V2Animation
+• PosAnimation
 ```java
 animation.animate(new V2(x, y), duration, Easing, safe);
 ```
