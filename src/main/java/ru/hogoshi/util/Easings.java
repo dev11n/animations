@@ -1,13 +1,8 @@
-package anims;
+package ru.hogoshi.util;
 
 import static java.lang.Math.*;
 
-@FunctionalInterface
-interface Easing {
-    double ease(double value);
-}
-
-final class Easings {
+public final class Easings {
 
     public static final double c1 = 1.70158D;
     public static final double c2 = c1 * 1.525D;
@@ -154,29 +149,3 @@ final class Easings {
 
 }
 
-class V2 {
-
-    private double x;
-    private double y;
-
-    public V2(double x, double y) {
-        setX(x);
-        setY(y);
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-}
