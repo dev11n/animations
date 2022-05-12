@@ -1,13 +1,11 @@
 package ru.hogoshi;
 
-import lombok.*;
 import ru.hogoshi.util.Easing;
 import ru.hogoshi.util.Easings;
 
 /**
  * Main class
  */
-@Data
 public class Animation {
 
     /**
@@ -131,4 +129,51 @@ public class Animation {
         return (end - start) / (value - start);
     }
 
+    public long getStart() {
+        return start;
+    }
+
+    public void setStart(long start) {
+        this.start = start;
+    }
+
+    public double getDuration() {
+        return duration;
+    }
+
+    public void setDuration(double duration) {
+        this.duration = duration;
+    }
+
+    public double getFromValue() {
+        return fromValue;
+    }
+
+    public void setFromValue(double fromValue) {
+        this.fromValue = fromValue;
+    }
+
+    public double getToValue() {
+        return toValue;
+    }
+
+    public void setToValue(double toValue) {
+        this.toValue = toValue;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public Easing getEasing() {
+        return easing;
+    }
+
+    public void setEasing(Easing easing) {
+        this.easing = easing;
+    }
 }

@@ -1,6 +1,5 @@
 package ru.hogoshi.type;
 
-import lombok.Data;
 import ru.hogoshi.Animation;
 import ru.hogoshi.util.ColorMath;
 import ru.hogoshi.util.Easing;
@@ -11,7 +10,6 @@ import java.awt.*;
 /**
  * Use if u need to animation the color value
  */
-@Data
 public class ColorAnimation {
 
     private final Animation red = new Animation();
@@ -116,4 +114,19 @@ public class ColorAnimation {
         return getColor().getRGB();
     }
 
+    public Animation getRed() {
+        return red;
+    }
+
+    public Animation getGreen() {
+        return green;
+    }
+
+    public Animation getBlue() {
+        return blue;
+    }
+
+    public Animation getAlpha() {
+        return alpha;
+    }
 }

@@ -1,8 +1,5 @@
 package ru.hogoshi.util;
 
-import lombok.Data;
-
-@Data
 public class V2 {
 
     private double x;
@@ -25,4 +22,19 @@ public class V2 {
         setY(y);
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
 }

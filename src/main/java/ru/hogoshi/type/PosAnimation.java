@@ -1,18 +1,13 @@
 package ru.hogoshi.type;
 
-import lombok.Data;
 import ru.hogoshi.Animation;
-import ru.hogoshi.util.ColorMath;
 import ru.hogoshi.util.Easing;
 import ru.hogoshi.util.Easings;
 import ru.hogoshi.util.V2;
 
-import java.awt.*;
-
 /**
  * Use if u need to animation the position
  */
-@Data
 public class PosAnimation {
 
     private final Animation x = new Animation();
@@ -73,4 +68,11 @@ public class PosAnimation {
         return !isAlive();
     }
 
+    public Animation getX() {
+        return x;
+    }
+
+    public Animation getY() {
+        return y;
+    }
 }
