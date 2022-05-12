@@ -14,7 +14,7 @@ repositories {
 	maven { url 'https://jitpack.io' }
 }
 dependencies {
-	implementation 'com.github.xHogoshi:java-animations:3.0'
+	implementation 'com.github.xHogoshi:java-animations:3.1'
 }
 ```
 <h2 align="center">Maven</h2>
@@ -30,7 +30,7 @@ dependencies {
 <dependency>
     <groupId>com.github.xHogoshi</groupId>
     <artifactId>java-animations</artifactId>
-    <version>3.0</version>
+    <version>3.1</version>
 </dependency>
 ```
 
