@@ -1,4 +1,4 @@
-<h1 align="center">Java Animations (use 2.0.1 version, 2.1 was fucked up)</h1>
+<h1 align="center">Java Animations</h1>
 <h3 align="center">Тута будет 2 языка - русский и английский.</h3>
 <h3 align="center">There will be 2 langs - russian and english.</h3>
 
