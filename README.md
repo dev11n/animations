@@ -34,8 +34,5 @@ dependencies {
 </dependency>
 ```
 
-<h1 align="center">Kotlin version</h1>
-<h4 align="center">https://github.com/zhogoshi/kt-animations</h4>
-
 <h1 align="center">Original</h1>
 <h4 align="center">https://github.com/delfikpro/cristalix-client-sdk/blob/stable/ui-engine/src/main/kotlin/ru/cristalix/uiengine/eventloop/Animation.kt</h4>
