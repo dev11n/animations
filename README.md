@@ -30,7 +30,7 @@ dependencies {
 <dependency>
     <groupId>com.github.xHogoshi</groupId>
     <artifactId>java-animations</artifactId>
-    <version>3.1</version>
+    <version>3.0</version>
 </dependency>
 ```
 
