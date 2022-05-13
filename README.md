@@ -14,7 +14,7 @@ repositories {
 	maven { url 'https://jitpack.io' }
 }
 dependencies {
-	implementation 'com.github.xHogoshi:java-animations:3.0'
+	implementation 'com.github.xHogoshi:java-animations:3.2'
 }
 ```
 <h2 align="center">Maven</h2>
@@ -30,12 +30,9 @@ dependencies {
 <dependency>
     <groupId>com.github.xHogoshi</groupId>
     <artifactId>java-animations</artifactId>
-    <version>3.0</version>
+    <version>3.2</version>
 </dependency>
 ```
-
-<h1 align="center">Kotlin version</h1>
-<h4 align="center">https://github.com/zhogoshi/kt-animations</h4>
 
 <h1 align="center">Original</h1>
 <h4 align="center">https://github.com/delfikpro/cristalix-client-sdk/blob/stable/ui-engine/src/main/kotlin/ru/cristalix/uiengine/eventloop/Animation.kt</h4>
