@@ -15,27 +15,26 @@ public class PosAnimation {
 
     /**
      * Main method, use to animate position
-     * @return returns method performed
      */
-    public boolean animate(V2 posTo, double duration) {
-        return animate(posTo, duration, false);
+    public void animate(V2 posTo, double duration) {
+        getX().animate(posTo.getX(), duration, false);
+        getY().animate(posTo.getY(), duration, false);
     }
 
     /**
      * Main method, use to animate position
-     * @return returns method performed
      */
-    public boolean animate(V2 posTo, double duration, boolean safe) {
-        return animate(posTo, duration, Easings.NONE, safe);
+    public void animate(V2 posTo, double duration, boolean safe) {
+        getX().animate(posTo.getX(), duration, Easings.NONE, safe);
+        getY().animate(posTo.getY(), duration, Easings.NONE, safe);
     }
 
     /**
      * Main method, use to animate position
-     * @return returns method performed
      */
-    public boolean animate(V2 posTo, double duration, Easing easing, boolean safe) {
-        return getX().animate(posTo.getX(), duration, easing, safe) &&
-                getY().animate(posTo.getY(), duration, easing, safe);
+    public void animate(V2 posTo, double duration, Easing easing, boolean safe) {
+        getX().animate(posTo.getX(), duration, easing, safe);
+        getY().animate(posTo.getY(), duration, easing, safe);
     }
 
     /**

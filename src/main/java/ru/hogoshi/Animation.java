@@ -33,14 +33,18 @@ public class Animation {
      * Animation type
      */
     private Easing easing = Easings.NONE;
+    /**
+     * Experimental thing
+     */
+    private boolean debug = false;
 
     /**
      * Main method, use to animate value to something.
      * @param valueTo toValue, value to which animation will go
      * @param duration duration, with which animation will animate
      */
-    public boolean animate(double valueTo, double duration) {
-        return animate(valueTo, duration, Easings.NONE, false);
+    public void animate(double valueTo, double duration) {
+        animate(valueTo, duration, Easings.NONE, false);
     }
 
     /**
@@ -49,8 +53,8 @@ public class Animation {
      * @param duration duration, with which animation will animate
      * @param safe means will it update when animation isAlive or with the same targetValue
      */
-    public boolean animate(double valueTo, double duration, boolean safe) {
-        return animate(valueTo, duration, Easings.NONE, safe);
+    public void animate(double valueTo, double duration, boolean safe) {
+        animate(valueTo, duration, Easings.NONE, safe);
     }
 
     /**
@@ -59,18 +63,19 @@ public class Animation {
      * @param duration duration, with which animation will animate
      * @param easing animation type, like formula for animation
      * @param safe means will it update when animation isAlive or with the same targetValue
-     * @return returns method performed
      */
-    public boolean animate(double valueTo, double duration, Easing easing, boolean safe) {
-        if(safe && (valueTo == getFromValue() || valueTo == getValue())) return false;
+    public void animate(double valueTo, double duration, Easing easing, boolean safe) {
+        if(safe && isAlive() && (valueTo == getFromValue() || valueTo == getToValue() || valueTo == getValue())) {
+            System.out.println("Animate method has been cancelled due to safe and valueTo == valueTo before");
+            return;
+        }
 
-        setToValue(value);
+        setToValue(valueTo);
         setFromValue(getValue());
         setStart(System.currentTimeMillis());
         setDuration(duration * 1000);
         setEasing(easing);
-
-        return true;
+        System.out.println("Animate method has been called! Animating: \nto value: " + getToValue() + "\nfrom value: " + getValue() + "\nduration: " + getDuration() + "\neasing: " + getEasing());
     }
 
     /**
@@ -81,7 +86,7 @@ public class Animation {
         double part = calculatePart();
         double foundVal;
         if(isAlive()) {
-            part = this.easing.ease(part);
+            part = getEasing().ease(part);
             foundVal = interpolate(getFromValue(), getToValue(), part);
         } else {
             setStart(0);
@@ -175,5 +180,13 @@ public class Animation {
 
     public void setEasing(Easing easing) {
         this.easing = easing;
+    }
+
+    public boolean isDebug() {
+        return debug;
+    }
+
+    public void setDebug(boolean debug) {
+        this.debug = debug;
     }
 }

@@ -19,57 +19,52 @@ public class ColorAnimation {
 
     /**
      * Main method, use to animate color
-     * @return returns method performed
      */
-    public boolean animate(int colorTo, double duration) {
-        return animate(colorTo, duration, false);
+    public void animate(int colorTo, double duration) {
+        animate(colorTo, duration, false);
     }
 
     /**
      * Main method, use to animate color
-     * @return returns method performed
      */
-    public boolean animate(int colorTo, double duration, boolean safe) {
-        return animate(colorTo, duration, Easings.NONE, safe);
+    public void animate(int colorTo, double duration, boolean safe) {
+        animate(colorTo, duration, Easings.NONE, safe);
     }
 
     /**
      * Main method, use to animate color
-     * @return returns method performed
      */
-    public boolean animate(int colorTo, double duration, Easing easing, boolean safe) {
-        return getRed().animate(ColorMath.extractRed(colorTo), duration, easing, safe) &&
-                getGreen().animate(ColorMath.extractGreen(colorTo), duration, easing, safe) &&
-                getBlue().animate(ColorMath.extractBlue(colorTo), duration, easing, safe) &&
-                getAlpha().animate(ColorMath.extractAlpha(colorTo), duration, easing, safe);
+    public void animate(int colorTo, double duration, Easing easing, boolean safe) {
+        getRed().animate(ColorMath.extractRed(colorTo), duration, easing, safe);
+        getGreen().animate(ColorMath.extractGreen(colorTo), duration, easing, safe);
+        getBlue().animate(ColorMath.extractBlue(colorTo), duration, easing, safe);
+        getAlpha().animate(ColorMath.extractAlpha(colorTo), duration, easing, safe);
     }
 
     /**
      * Main method, use to animate color
-     * @return returns method performed
      */
-    public boolean animate(Color colorTo, double duration, Easing easing, boolean safe) {
-        return animate(colorTo.getRGB(), duration, easing, safe);
+    public void animate(Color colorTo, double duration, Easing easing, boolean safe) {
+        animate(colorTo.getRGB(), duration, easing, safe);
     }
 
     /**
      * Main method, use to animate color
-     * @return returns method performed
      */
-    public boolean animate(Color colorTo, double duration, boolean safe) {
-        return animate(colorTo.getRGB(), duration, Easings.NONE, safe);
+    public void animate(Color colorTo, double duration, boolean safe) {
+        animate(colorTo.getRGB(), duration, Easings.NONE, safe);
     }
 
     /**
      * Main method, use to animate color
-     * @return returns method performed
      */
-    public boolean animate(Color colorTo, double duration) {
-        return animate(colorTo.getRGB(), duration, false);
+    public void animate(Color colorTo, double duration) {
+        animate(colorTo.getRGB(), duration, false);
     }
 
     /**
      * Updates all colors
+     *
      * @return all colors alive
      */
     public boolean update() {
@@ -100,6 +95,7 @@ public class ColorAnimation {
 
     /**
      * Build java.awt.Color
+     *
      * @return java.awt.Color
      */
     public Color getColor() {
@@ -108,6 +104,7 @@ public class ColorAnimation {
 
     /**
      * return RGB color code
+     *
      * @return java.awt.Color#getRGB()
      */
     public int getHex() {
