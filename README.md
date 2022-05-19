@@ -1,5 +1,5 @@
 <h1 align="center">Java Animations</h1>
-<h3 align="center">Docs are available here(https://hogoshi.gitbook.io/animations/)</h3>
+<h3 align="center">Docs - https://hogoshi.gitbook.io/animations</h3>
 
 <h4 align="center">This repository will no longer be updated (If it is, then only the addition of new animations, etc.) due to the fact that I do not see the point in continuing it. I see the complete stiffness of everything in it, and therefore I think it would be better to just inform about it.</h4>
 
