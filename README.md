@@ -9,4 +9,4 @@
 <h3 align="center">Thanks for reading.</h3>
 
 <h1 align="center">Original</h1>
-<h4 align="center">https://github.com/delfikpro/cristalix-client-sdk/blob/stable/ui-engine/src/main/kotlin/ru/cristalix/uiengine/eventloop/Animation.kt</h4>
+<h4 align="center">https://github.com/cristalix-arcades/cristalix-client-sdk/blob/stable/ui-engine/src/main/kotlin/ru/cristalix/uiengine/eventloop/Animation.kt</h4>
